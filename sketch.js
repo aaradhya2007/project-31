@@ -32,9 +32,7 @@ function setup() {
      d6=new Division(480,335,10,100)
      d8=new Division(640,335,10,100)
      d7=new Division(560,335,10,100)
-if(frameCount%60===0){
-  particles.push(new Particle(random(width/2-10,width/2+10),10,10))
-}
+
 }
 
 function draw() {
@@ -45,6 +43,15 @@ function draw() {
   for (var i = 0; i < pinkos.length; i++) {
      
     pinkos[i].display();
+    
+
+  }
+  if(frameCount%60===0){
+    particles.push(new Particle(random(width/2-10,width/2+10),10,10))
+  }
+  for (var j= 0; j < particles.length; j++) {
+     
+    particles[j].display();
     
 
   }
